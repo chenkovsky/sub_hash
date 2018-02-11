@@ -1,0 +1,9 @@
+name: sub_hash
+version: 0.1.0
+
+authors:
+  - chenkovsky <chenkovsky@qq.com>
+
+crystal: 0.24.1
+
+license: MIT
