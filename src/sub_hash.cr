@@ -13,7 +13,7 @@ struct SubHash
   @suffix_cache : Array(UInt64)
   @term_size : Int32
 
-  def initialize(@base = DefaultBase, @modulo = DefaultModulo, capacity = 256)
+  def initialize(@base = DefaultBase, @modulo = DefaultModulo, capacity : Int32 = 256)
     @power_cache = init_power capacity, @base.to_u128
     @suffix_cache = Array(UInt64).new(capacity, 0_u64)
     @term_size = 0
