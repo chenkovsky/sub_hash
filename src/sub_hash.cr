@@ -45,7 +45,6 @@ struct SubHash
     len = @term_size - start if len > @term_size - start
     sub = @suffix_cache[start + len].to_u128 * @power_cache[len] % @modulo
     res = (@suffix_cache[start] + @modulo - sub) % @modulo
-    res = (res.to_u128) % @modulo
     res.to_u64
   end
 
