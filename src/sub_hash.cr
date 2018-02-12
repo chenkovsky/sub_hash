@@ -28,7 +28,7 @@ struct SubHash
 
   def sub_hash(term) : Void
     @term_size = term.size
-    if @power_cache.size < term.size
+    if @power_cache.size <= term.size
       capacity = Math.pw2ceil(term.size + 1)
       @power_cache = init_power capacity, @base.to_u128
       @suffix_cache = Array(UInt64).new(capacity, 0_u64)
